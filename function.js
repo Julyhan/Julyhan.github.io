@@ -1,15 +1,15 @@
 var strbegin;
 function locking(str){
-	document.body.innerHTML=str+document.body.innerHTML;
-	document.all.ly.style.display="block";
-	document.all.ly.style.width=document.body.clientWidth;
-	document.all.ly.style.height=document.body.clientHeight;
-	document.all.Layer2.style.display='block';
+	document.body.innerHTML = str;
+	document.all.ly.style.display = "block";
+	document.all.ly.style.width = document.body.clientWidth;
+	document.all.ly.style.height = document.body.clientHeight;
+	document.all.Layer2.style.display = 'block';
 }
 function Lock_CheckForm(){	
-	document.all.ly.style.display='none';
-	document.all.Layer2.style.display='none';
-	document.body.innerHTML=strbegin;
+	document.all.ly.style.display = 'none';
+	document.all.Layer2.style.display = 'none';
+	document.body.innerHTML = strbegin;
 	return false;
 }
 function openlog()
@@ -44,20 +44,19 @@ function share(a,title,board,file){
 }
 
 function sharewechat(){
-	strQr=document.location.href;
-	alert(strQr);
+	strUrl = document.location.href;
 	strbegin = document.body.innerHTML;
-	var sss=create_qrcode(strQr, 4, 'L', 6);
+	var strQr = create_qrcode(strUrl, 4, 'L', 6);
 	var str = "<div id='ly' style='position: absolute; top: 0px; filter: alpha(opacity=60); background-color: #777;z-index: 92; left: 0px; display: none;'></div>"
-				+"<div id='Layer2' align='center' style='position: relative; z-index: 93;  width:540px; margin-left:auto; margin-right:auto; background-color: #fff; display: none;' >"
-				+"<table width='540' height='300' border='0' cellpadding='0' cellspacing='0' style='border: 0    solid    #e7e3e7;border-collapse: collapse ;' >"
-				+"<tr><td style='background-color: #73A2d6; color: #fff; padding-left: 4px; padding-top: 2px;font-weight: bold; font-size: 12px;' height='10' valign='middle'>"
-				+"<div align='right'><a href=JavaScript:; class='STYLE1' onclick='Lock_CheckForm();'>[close]</a></div></td></tr>"
-				+"<tr><td height='130' align='center'><script src='qrcode.js'></script>"
-				+"<style> .ykewm{border-width: 0px; border-style: none;border-collapse: collapse;padding: 0px;}.ykewm td{border-width: 0px; border-style: none;border-collapse: collapse;padding: 0px; margin: 0px;}</style><div id='qr'></div>"
-				+sss
-				+"</td></tr>"
-				+"</table></div>";
+				+ "<div id='Layer2' align='center' style='position: relative; z-index: 93;  width:540px; margin-left:auto; margin-right:auto; background-color: #fff; display: none;' >"
+				+ "<table width='540' height='300' border='0' cellpadding='0' cellspacing='0' style='border: 0    solid    #e7e3e7;border-collapse: collapse ;' >"
+				+ "<tr><td style='background-color: #73A2d6; color: #fff; padding-left: 4px; padding-top: 2px;font-weight: bold; font-size: 12px;' height='10' valign='middle'>"
+				+ "<div align='right'><a href=JavaScript:; class='STYLE1' onclick='Lock_CheckForm();'>[close]</a></div></td></tr>"
+				+ "<tr><td height='130' align='center'><script src='qrcode.js'></script>"
+				+ "<style> .ykewm{border-width: 0px; border-style: none;border-collapse: collapse;padding: 0px;}.ykewm td{border-width: 0px; border-style: none;border-collapse: collapse;padding: 0px; margin: 0px;}</style><div id='qr'></div>"
+				+ strQr
+				+ "</td></tr>"
+				+ "</table></div>";
 	locking(str);
 }
 function thread_share(a,title,owner,board,thread,start,article_count){
