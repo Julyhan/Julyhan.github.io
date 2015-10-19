@@ -48,8 +48,8 @@ function sharewechat(){
 	strQr=window.location.protocol + '//' + window.location.pathname;
 	strbegin = document.body.innerHTML;
 	var sss=create_qrcode(strQr, 4, 'L', 6);
-	var str = "<div id='ly' style='position: absolute; top: 0px; filter: alpha(opacity=60); background-color: #777;z-index: 2; left: 0px; display: none;'></div>"
-				+"<div id='Layer2' align='center' style='position: relative; z-index: 3;  width:540px; margin-left:auto; margin-right:auto; background-color: #fff; display: none;' >"
+	var str = "<div id='ly' style='position: absolute; top: 0px; filter: alpha(opacity=60); background-color: #777;z-index: 92; left: 0px; display: none;'></div>"
+				+"<div id='Layer2' align='center' style='position: relative; z-index: 93;  width:540px; margin-left:auto; margin-right:auto; background-color: #fff; display: none;' >"
 				+"<table width='540' height='300' border='0' cellpadding='0' cellspacing='0' style='border: 0    solid    #e7e3e7;border-collapse: collapse ;' >"
 				+"<tr><td style='background-color: #73A2d6; color: #fff; padding-left: 4px; padding-top: 2px;font-weight: bold; font-size: 12px;' height='10' valign='middle'>"
 				+"<div align='right'><a href=JavaScript:; class='STYLE1' onclick='Lock_CheckForm();'>[close]</a></div></td></tr>"
