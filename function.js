@@ -1,14 +1,10 @@
 var strbegin;
 function locking(str){
-	document.body.innerHTML=str;
-	alert("document.body.innerHTML+=str");
+	document.body.innerHTML=str+document.body.innerHTML;
 	document.all.ly.style.display="block";
 	document.all.ly.style.width=document.body.clientWidth;
 	document.all.ly.style.height=document.body.clientHeight;
-	alert("document.all.ly.style.height=document.body.clientHeight;");
 	document.all.Layer2.style.display='block';
-	alert("document.all.Layer2.style.display='block'");
-
 }
 function Lock_CheckForm(){	
 	document.all.ly.style.display='none';
@@ -49,6 +45,7 @@ function share(a,title,board,file){
 
 function sharewechat(){
 	strQr=window.location.protocol + '//' + window.location.pathname;
+	alert(strQr);
 	strbegin = document.body.innerHTML;
 	var sss=create_qrcode(strQr, 4, 'L', 6);
 	var str = "<div id='ly' style='position: absolute; top: 0px; filter: alpha(opacity=60); background-color: #777;z-index: 92; left: 0px; display: none;'></div>"
