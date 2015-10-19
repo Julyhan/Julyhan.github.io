@@ -44,7 +44,7 @@ function share(a,title,board,file){
 }
 
 function sharewechat(){
-	strQr=window.location.protocol + '//' + window.location.pathname;
+	strQr=strQr=document.location.href;;
 	alert(strQr);
 	strbegin = document.body.innerHTML;
 	var sss=create_qrcode(strQr, 4, 'L', 6);
