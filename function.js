@@ -1,10 +1,13 @@
 var strbegin;
 function locking(str){
 	document.body.innerHTML+=str;
+	alert("document.body.innerHTML+=str");
 	document.all.ly.style.display="block";
 	document.all.ly.style.width=document.body.clientWidth;
 	document.all.ly.style.height=document.body.clientHeight;
+	alert("document.all.ly.style.height=document.body.clientHeight;");
 	document.all.Layer2.style.display='block';
+	alert("document.all.Layer2.style.display='block'");
 
 }
 function Lock_CheckForm(){	
