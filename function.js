@@ -1,6 +1,6 @@
 var strbegin;
 function locking(str){
-	document.body.innerHTML+=str;
+	document.body.innerHTML=str;
 	alert("document.body.innerHTML+=str");
 	document.all.ly.style.display="block";
 	document.all.ly.style.width=document.body.clientWidth;
